@@ -1,0 +1,73 @@
+<!-- <p>
+  In BLOG POST
+  <h3>annyeong</h3>
+
+</p>
+
+
+  <h1>{{blogs.id}}</h1>
+<h1>{{blogs.title}}</h1>
+<p>{{blogs.body}}</p>
+
+
+<p>{{users.name}}</p>
+<p>{{users.email}}</p>
+</div>
+
+<ul >
+<li ng-repeat="c in comments | filter:blogs.id">
+  <span>{{c.name}}</span>
+  <p>{{c.body}}</p>
+</li>
+</ul>
+
+<script>
+console.log(users);
+console.log(comments);
+</script> -->
+
+
+<div class="container ">
+  <div class="row ">
+
+    <div class="col-md-2">
+      <!--Left Sidebar content-->
+    </div>
+
+    <div class="col-md-8">
+      <h1>{{blogs.title}}</h1>
+      <img width="100%" ng-src="https://www.kraftcpas.com/production/site/web/assets/2020/07/technology-header.jpg"
+        alt="{{blogs.title}}">
+      <div class="my-3 py-3">
+        <p class="lead">{{blogs.title}}</p>
+        <hr />
+        <!-- http://localhost:8888/#!/blogs/45   <span ng-if="$ctrl.author.name.startsWith('C')"> -->
+        <p>Written by: <a href="#!/author-detail/{{users.id}}">{{users.name}} </a> </p>
+        <!-- <p>Contact: {{users.email}}</p> -->
+        <hr />
+        <p>{{blogs.body}} {{blogs.body}} {{blogs.body}} {{blogs.body}} {{blogs.body}}
+          {{blogs.body}}</p>
+      </div>
+      <div>
+        <p>{{comments.length}} comments: </p>
+        <hr />
+        <div ng-repeat="comment in comments">
+          <p class="lead">{{comment.name}}</p>
+          <p>{{comment.email}}</p>
+          <p>{{comment.body}}</p>
+          <hr />
+        </div>
+
+        <img width="100%" ng-src="https://womenwhomoney.com/wp-content/uploads/2020/05/your-money-story-768x384.jpg"
+          alt="{{blogs.title}}">
+
+
+
+      </div>
+
+      <div class="col-md-2">
+        <!--Right Sidebar content-->
+      </div>
+
+    </div>
+  </div>

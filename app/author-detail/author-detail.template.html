@@ -1,0 +1,52 @@
+<div class="container ">
+<div class="row">
+    
+    <div class="col-md-3"></div>
+
+<div class="col-md-6">
+    <div class="card text-center">
+        <div class="card-header">
+            <h2>{{authors.name}}</h2>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{authors.email}}</h5>
+          <p class="card-text">Address</p>
+    
+        <p><h5>Street</h5> {{authors.address.street}}</p>
+        <p> <h5>City</h5> {{authors.address.city}}</p>
+        </div>
+        <div class="card-footer text-muted">
+            {{authors.website}}
+        </div>
+    </div>
+</div>
+
+<div class="col-md-3"></div>
+</div>
+</div>
+
+<div class="container mt-5">
+    <div class="row">
+        <table class="table table-striped">
+           
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">BLOGS LIST</th>
+                    
+                  </tr>
+                </thead>
+                
+                <tbody>
+                  <tr ng-repeat="ub in userBlogs">
+                    <th scope="row">{{ub.id}}</th>
+                    <td><a href="#!/blogpost/{{ub.id}}/{{ub.userId}}" class="text-dark">{{ub.title}}</a></td>
+                   
+                  </tr>
+                </tbody>
+              
+          </table>
+    </div>
+</div>
+
+

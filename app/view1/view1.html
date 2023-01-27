@@ -1,0 +1,103 @@
+<!-- <p>This is the partial {{$ctrl.posts.length}} for view 1.
+  its we are on aride 
+</p>
+
+<p>
+  Search:
+  <input ng-model="$scope.query" />
+</p>
+
+
+<ul >
+    <li ng-repeat="pos in filteredItems | filter:$scope.query | filter:pos.title ">
+      <span>id: {{pos.id}}</span>
+      <a href="#!/blogpost/{{pos.id}}/{{pos.userId}}"><p>{{pos.title}}</p></a>
+    </li>
+    <a href="#!/view1">next</a>
+  </ul>
+
+  <div data-pagination=""
+         data-num-pages="numOfPages()"
+         data-current-page="curPage"
+         data-max-size="maxSize"
+         data-boundary-links="true">
+  </div>
+
+  <p>pink lemonade</p> -->
+
+  <div class="container-fluid">
+    <!-- <div class="text-center">
+      <p class="display-4 text-primary">Deloitte Blog Posts</p>
+      <hr />
+    </div> -->
+
+    <div class="card">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="images/blogs.jpg" class="img-fluid rounded-start h-100" alt="...">
+        </div>
+        <div class="col-md-8 p-5 text-center">
+          <div class="card-body m-5" style="color: #31525B;">
+            <h5 class="card-title">Let's Blog !!!</h5>
+            <p class="card-text">Here you can visit all the blogs written by our very talented bloggers. Hope you will enjot it !!!</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- <div class="col-md-2">
+        
+      </div> -->
+      <div class="col-md-12 w-100"  style="background-color: #31525B;">
+        <div class="my-3 py-3">
+          <input type="text" ng-model="$scope.query" class="form-control"
+            placeholder="Search a blog post here or select one below">
+        </div>
+        <div>
+          <ul style="list-style: none;">
+            <li ng-repeat="pos in posts | startFrom : currentPage * pageSize | limitTo : pageSize |filter:$scope.query">
+              <a href="#!/blogpost/{{pos.id}}/{{pos.userId}}" class="text-white m-3">{{pos.title}}</a>
+            </li>
+          </ul>
+          <div class="text-center">
+            <button  class="btn btn-light m-3" ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1">
+              Previous
+            </button>
+            <span class="text-white"> {{currentPage+1}}/{{numberOfPages()}} </span>
+            <button  class="btn btn-light m-3" ng-disabled="currentPage >= posts.length/pageSize - 1"
+              ng-click="currentPage=currentPage+1">
+              Next
+            </button>
+  
+          </div>
+          <hr />
+
+        <!-- <div class="my-3 py-3">
+          <input type="text" ng-model="$scope.query" class="form-control"
+            placeholder="Search a blog post here or select one below">
+        </div>
+  
+        <div>
+          <ul style="list-style: none;">
+            <li ng-repeat="pos in posts | filter:$scope.query | filter:pos.title ">
+              <a href="#!/blogpost/{{pos.id}}/{{pos.userId}}">{{pos.title}}</a>
+            </li>
+          </ul>
+           <p ng-repeat="pos in posts | filter:$scope.query | filter:pos.title ">
+            <a href="#!/blogpost/{{pos.id}}/{{pos.userId}}">{{pos.title}}</a>
+          </p> -->
+
+         
+        </div> 
+  
+      </div>
+      <div class="col-md-2">
+  
+      </div>
+    </div>
+  </div>
+
+  
+  
